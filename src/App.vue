@@ -3,8 +3,10 @@
     <header class="header">
       Mike's Movies
     </header>
-    <SearchBar />
-    <MovieList />
+    <SearchBar v-on:addToSearchURL="search"/>
+    <MovieList :searchTerm="searchItem"/>
+
+
   </div>
 </template>
 
@@ -16,6 +18,17 @@ export default {
   components: {
     SearchBar,
     MovieList
+  },
+  data: function() {
+    return {
+      searchItem: ''
+    }
+  },
+  methods: {
+    search: function(searchTerm) {
+      this.searchItem = searchTerm
+      console.log(this.searchItem)
+    }
   }
 };
 </script>
