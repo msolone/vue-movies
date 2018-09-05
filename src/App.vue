@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header class="header">
+      Mike's Movies
+      <section>
+        Trending
+      </section>
+    </header>
+    <SearchBar />
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import SearchBar from './components/SearchBar.vue';
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    SearchBar
   }
-}
+};
 </script>
 
 <style>
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #2c3e50
+}
+
+
 </style>
