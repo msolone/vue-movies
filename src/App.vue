@@ -2,22 +2,20 @@
   <div id="app">
     <header class="header">
       Mike's Movies
-      <section>
-        Trending
-      </section>
     </header>
     <SearchBar />
-
-
+    <MovieList />
   </div>
 </template>
 
 <script>
-import SearchBar from './components/SearchBar.vue';
+import SearchBar from "./components/SearchBar.vue";
+import MovieList from "./components/MovieList.vue";
 export default {
   name: "app",
   components: {
-    SearchBar
+    SearchBar,
+    MovieList
   }
 };
 </script>
@@ -30,6 +28,11 @@ html {
 body {
   height: 100%;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,10 +44,8 @@ body {
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid #2c3e50
+  justify-content: center;
+  border-bottom: 2px solid #2c3e50;
+  font-size: 2em;
 }
-
-
 </style>
