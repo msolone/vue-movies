@@ -27,7 +27,7 @@ export default {
   methods: {
     search: function(searchTerm) {
       this.searchItem = searchTerm
-      console.log(this.searchItem)
+      console.log("caught Emit", this.searchItem)
     }
   }
 };
